@@ -1,0 +1,304 @@
+/* --- HOME SECTION --- */
+
+.homeContainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Image & Overlay */
+.background_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.background_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Content Wrapper */
+.homeWrapper {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #ffffff;
+    gap: 1.5rem;
+    padding-top: 4rem;
+    /* Offset for nav */
+}
+
+/* Keywords Row */
+.subHeading {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 0px;
+    /* Reduced margin */
+}
+
+.subHeading p {
+    font-family: var(--font-sub);
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Name & Title */
+.name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.name h1 {
+    font-family: var(--font-display);
+    font-size: 8.5rem;
+    /* Much bigger */
+    font-weight: 400;
+    margin: 0;
+    line-height: 0.9;
+    color: #ffffff;
+    margin-top: -15px;
+    /* Pull tighter */
+}
+
+.name p {
+    font-family: var(--font-sub);
+    /* Libre Bodoni */
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #ffffff;
+    margin: 0;
+}
+
+.name span {
+    color: var(--accent-span);
+    /* #75C089 */
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Social Icons */
+.socials {
+    display: flex;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    margin: 1rem 0;
+}
+
+.socials i {
+    font-size: 1.5rem;
+    color: var(--accent);
+    /* #D2C49E */
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.socials i:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+/* Description Paragraph */
+.description {
+    max-width: 600px;
+}
+
+.description p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+.description span {
+    color: var(--accent-span);
+    /* #75C089 */
+    font-weight: 600;
+}
+
+/* Call to Action Buttons */
+.cta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.btnOutline {
+    padding: 0.8rem 2.5rem;
+    border: 1px solid var(--accent);
+    /* #D2C49E */
+    background: transparent;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btnOutline:hover {
+    background: var(--accent);
+    color: #1a1a1a;
+}
+
+.btnFilled {
+    padding: 0.8rem 2.5rem;
+    background-color: var(--cta-primary);
+    /* #3B6255 */
+    border: 1px solid var(--cta-primary);
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btnFilled:hover {
+    background-color: #2a463d;
+    border-color: #2a463d;
+    transform: translateY(-2px);
+}
+
+/* Scroll Indicator */
+.scrollMore {
+    margin-top: 2rem;
+    animation: bounce 2s infinite;
+}
+
+.scrollMore i {
+    font-size: 2rem;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES (Preserved Separate Breakpoints) --- */
+
+/* PHONES (max-width: 767px) */
+@media (max-width: 767px) {
+    .homeWrapper {
+        padding: 6rem 1.5rem 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .subHeading {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .subHeading p {
+        font-size: 0.9rem;
+    }
+
+    .name h1 {
+        font-size: 3.5rem;
+    }
+
+    .name p {
+        font-size: 1.1rem;
+    }
+
+    .description p {
+        font-size: 1rem;
+    }
+
+    .cta {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .btnOutline,
+    .btnFilled {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* TABLETS PORTRAIT (768px - 1280px, portrait) */
+@media (min-width: 768px) and (max-width: 1280px) and (orientation: portrait) {
+    .name h1 {
+        font-size: 5rem;
+    }
+
+    .homeWrapper {
+        padding-top: 8rem;
+    }
+}
+
+
+/* TABLETS LANDSCAPE (768px - 1280px, landscape) */
+@media (min-width: 768px) and (max-width: 1280px) and (orientation: landscape) {
+    .name h1 {
+        font-size: 4.5rem;
+    }
+
+    .homeWrapper {
+        gap: 1rem;
+    }
+}
+
+
+/* iPad Pro LANDSCAPE only */
+@media only screen and (device-width: 1366px) and (device-height: 1024px) and (orientation: landscape) {
+    .name h1 {
+        font-size: 5.5rem;
+    }
+}
+
+
+/* iPad Pro PORTRAIT only */
+@media only screen and (device-width: 1024px) and (device-height: 1366px) and (orientation: portrait) {
+    .name h1 {
+        font-size: 6rem;
+    }
+}

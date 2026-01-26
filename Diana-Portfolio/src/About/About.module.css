@@ -1,0 +1,301 @@
+/* --- ABOUT SECTION (REDO) --- */
+
+.aboutContainer {
+    width: 100%;
+    background-color: #FFFFFF;
+    /* Pure White */
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    /* 2 Columns: Left Narrower, Right Wider */
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 8rem 2rem;
+    /* Breathing gap */
+    gap: 4rem;
+    align-items: center;
+}
+
+/* --- LEFT COLUMN (Section 1) --- */
+.section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.header {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header h1 {
+    font-family: var(--font-sub);
+    /* Serif Display */
+    font-size: 3rem;
+    font-weight: 400;
+    /* Regular */
+    color: var(--text-header);
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Divider Line */
+.header hr {
+    width: 160px;
+    /* Width of title approx */
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    /* Medium Gray */
+    margin-top: 0.5rem;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* Noticeable vertical gap */
+    margin-bottom: 3rem;
+    max-width: 450px;
+    /* Narrow line length */
+}
+
+.description p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    /* Comfortable */
+    color: #333333;
+    /* Dark Gray */
+    margin: 0;
+}
+
+/* Ebook Block */
+.ebook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.accentLine {
+    color: var(--accent-span);
+    /* #75C089 */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.ebookCover {
+    width: 280px;
+    /* Medium-large */
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+}
+
+/* Fused Email Form */
+.emailField {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    /* Roughly book width */
+}
+
+.emailField input {
+    flex: 1;
+    background-color: #F2F2F2;
+    /* Light Gray */
+    border: none;
+    padding: 1rem 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    border-radius: 4px 0 0 4px;
+    /* Left radius only */
+}
+
+.emailField input::placeholder {
+    color: #888;
+}
+
+.emailField input:focus {
+    outline: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.emailField button {
+    background-color: #3B6255;
+    /* Dark Green */
+    color: #fff;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    /* Right radius only */
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.emailField button:hover {
+    background-color: #2a463d;
+}
+
+/* --- RIGHT COLUMN (Collage) --- */
+.section2 {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* Specific height for positioning */
+    display: flex;
+    justify-content: center;
+    /* Helper */
+}
+
+.imgContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    /* Limit overlap area */
+}
+
+.imgContainer img {
+    position: absolute;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Square corners per spec */
+    border-radius: 0;
+}
+
+/* Image 1: Gym/Background (Top Left-ish) */
+.imgContainer img:nth-child(1) {
+    width: 55%;
+    height: auto;
+    aspect-ratio: 3/4;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Image 2: Salad/Foreground (Top Right-ish) */
+.imgContainer img:nth-child(2) {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 3/4;
+    top: 5%;
+    right: 0;
+    z-index: 2;
+}
+
+/* Image 3: Plate/Face (Bottom Center, Dominate) */
+.imgContainer img:nth-child(3) {
+    width: 60%;
+    height: auto;
+    aspect-ratio: 4/5;
+    bottom: 0;
+    left: 20%;
+    z-index: 3;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* PHONES (max-width: 767px) */
+@media (max-width: 767px) {
+    .aboutContainer {
+        grid-template-columns: 1fr;
+        padding: 4rem 1rem;
+        gap: 3rem;
+    }
+
+    .section1 {
+        padding: 0 1rem;
+    }
+
+    .header hr {
+        margin: 0.5rem auto 0 auto;
+    }
+
+    .emailField {
+        margin: 0 auto;
+    }
+
+    /* Collage Stack for Mobile */
+    .section2 {
+        height: auto;
+        min-height: 400px;
+        margin-top: 2rem;
+    }
+
+    .imgContainer {
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .imgContainer img:nth-child(1) {
+        width: 60%;
+        left: 0;
+    }
+
+    .imgContainer img:nth-child(2) {
+        width: 55%;
+        top: 15%;
+    }
+
+    .imgContainer img:nth-child(3) {
+        width: 65%;
+        left: 17%;
+        bottom: 0;
+    }
+}
+
+
+/* TABLETS PORTRAIT (768px - 1280px, portrait) */
+@media (min-width: 768px) and (max-width: 1280px) and (orientation: portrait) {
+    .aboutContainer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 5rem;
+    }
+
+    .header hr {
+        margin: 0.5rem auto 0 auto;
+    }
+
+    .emailField {
+        margin: 0 auto;
+    }
+
+    .section2 {
+        height: 700px;
+    }
+
+    .imgContainer {
+        margin: 0 auto;
+    }
+}
+
+
+/* TABLETS LANDSCAPE (768px - 1280px, landscape) */
+@media (min-width: 768px) and (max-width: 1280px) and (orientation: landscape) {
+    .aboutContainer {
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section2 {
+        height: 500px;
+    }
+}

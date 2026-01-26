@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Bodoni:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+button {
+  font-family: 'Lato', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+
+:root {
+  font-size: 90%;
+  font-family: 'Montserrat', sans-serif;
+
+  font-optical-sizing: auto;
+  font-style: normal;
+  overflow-x: hidden;
+
+  /* Color Palette */
+  --bg-primary: #FFFFFF;
+  /* Cream - Home/About Background */
+  --bg-white: #FFFFFF;
+  /* White - Benefits Background */
+  --bg-product: #8BA49A;
+  /* Green - Product Background */
+  --bg-footer: #8BA49A;
+  /* Green - Footer Background */
+
+  --text-header: #1A1A1A;
+  --text-body: #333333;
+  --text-muted: #8c8c8c;
+  --text-light: #FFFFFF;
+
+  --accent: #D2C49E;
+  /* Gold/Tan - Icons, secondary accents */
+  --accent-span: #75C089;
+  /* Light Green - Highlighted text */
+  --cta-primary: #3B6255;
+  /* Dark Green - Primary Buttons */
+
+  --font-display: 'Crimson Text', serif;
+  /* H1 */
+  --font-sub: 'Libre Bodoni', serif;
+  /* Subheadings */
+
+  background-color: var(--bg-primary);
+  color: var(--text-body);
+}
+
+body {
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Libre Bodoni', serif;
+  color: var(--text-header);
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.app {
+  background-color: var(--bg-primary);
+  color: var(--text-body);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 4rem 1fr 1fr;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0 auto;
+}
+
+.app .header {
+  grid-column: 1 / -1;
+}
+
+.app .main {
+  grid-column: 1 / -1;
+}
+
+.app .footer {
+  grid-column: 1 / -1;
+}
+
+
+
+
+
+@media (max-width: 767px) {
+
+  :root {
+    font-size: 80%;
+  }
+
+  .app {
+    grid-template-columns: minmax(100%, 1fr);
+    max-width: 100%;
+
+
+  }
+
+}
