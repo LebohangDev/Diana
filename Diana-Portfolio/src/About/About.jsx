@@ -11,8 +11,8 @@ const About = () => {
         title: "From Everyday Meals to a Healthier Lifestyle",
         amount: 10,
         currency: "USD",
-        successUrl: "https://lebohangdev.github.io/Diana-Portfolio/?payment=success",
-        cancelUrl: "https://lebohangdev.github.io/Diana-Portfolio/?payment=cancel",
+        successUrl: "https://lebohangdev.github.io/Diana/?payment=success",
+        cancelUrl: "https://lebohangdev.github.io/Diana/?payment=cancel",
     };
 
     const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.toLowerCase());

@@ -310,6 +310,11 @@
     color: var(--text-muted);
 }
 
+/* Remove underline from anchor wrapping button */
+.benefitsLeft a {
+    text-decoration: none;
+}
+
 .orderBtn {
     background-color: var(--cta-primary);
     color: #fff;
@@ -328,6 +333,7 @@
     justify-content: center;
     gap: 0.5rem;
     position: relative;
+    text-decoration: none;
 }
 
 .orderBtn i {
@@ -343,13 +349,16 @@
 
 .bookStack {
     margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bookStack img {
     width: 100%;
     max-width: 500px;
-
-
+    display: block;
+    margin: 0 auto;
 }
 
 /* Right Grid */
