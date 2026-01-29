@@ -101,9 +101,28 @@
 /* Fused Email Form */
 .emailField {
     display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 400px;
+    gap: 1rem;
     /* Roughly book width */
+}
+
+/* Email Valid */
+.validEmail {
+    visibility: hidden;
+}
+
+/*invalid*/
+.emailField p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #c91111;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    text-align: left;
+    height: 1.2rem;
 }
 
 .emailField input {
@@ -149,6 +168,19 @@
 
 .emailField button:hover {
     background-color: #2a463d;
+}
+
+/* Disabled Button State */
+.emailField button.disabled,
+.emailField button:disabled {
+    background-color: #6b8179;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.emailField button.disabled:hover,
+.emailField button:disabled:hover {
+    background-color: #6b8179;
 }
 
 /* --- RIGHT COLUMN (Collage) --- */

@@ -118,6 +118,9 @@ const Product = () => {
                         <p>Healthy living doesn’t need to be complicated. I share simple, nourishing recipes and everyday habits that fit into real life. Everything starts in your own kitchen — with food that’s easy to make, enjoyable to eat, and supportive of your long-term wellbeing.</p>
 
                         <div className={styles.ProductContentBodyButton}>
+                            <p className={email && !isEmailValid ? styles.invalidEmail : styles.validEmail}>
+                                {email && !isEmailValid ? '*Enter a valid email' : ""}
+                            </p>
                             <input
                                 type="email"
                                 className={styles.emailInput}
@@ -125,7 +128,11 @@ const Product = () => {
                                 value={email}
                                 onChange={handleEmailChange}
                             />
-                            <button disabled={!isEmailValid} onClick={() => { handleZinnaPayment(); setEmail(''); }}>
+                            <button
+                                disabled={!isEmailValid}
+                                onClick={() => { handleZinnaPayment(); setEmail(''); }}
+                                className={!isEmailValid ? styles.disabled : ''}
+                            >
                                 GET STARTED NOW!
                             </button>
                         </div>
