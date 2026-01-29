@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -29,10 +28,10 @@ const Footer = () => {
                     </div>
                     <div className={styles.footerNav}>
                         <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/about">About</Link></li>
-                            <li><Link to="/product">Product</Link></li>
-                            <li><Link to="/product">Benefits</Link></li>
+                            <li><a href="#Home">Home</a></li>
+                            <li><a href="#About">About</a></li>
+                            <li><a href="#Product">Product</a></li>
+                            <li><a href="#Benefits">Benefits</a></li>
                         </ul>
                     </div>
                 </div>

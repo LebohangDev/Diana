@@ -1,6 +1,6 @@
-import { useRef, useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+
+import { useState, useRef, useEffect } from 'react';
+import { BrowserRouter, useLocation, useNavigate } from 'react-router-dom';
 import Home from './Home/Home';
 import About from './About/About';
 import Product from './Product/Product';
@@ -8,81 +8,61 @@ import Nav from './Nav/Nav';
 import Footer from './Footer/Footer';
 
 function AppContent() {
-  const location = useLocation();
+  const [activeNav, setActiveNav] = useState('Home');
   const containerRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(true);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  let lastScrollTop = 0;
-
+  // Scroll to section based on URL path
   useEffect(() => {
-    const container = containerRef.current;
+    const pathToSection = {
+      '/': 'Home',
+      '/home': 'Home',
+      '/about': 'About',
+      '/product': 'Product',
+      '/benefits': 'Product',
+    };
 
-    const isScrolling = (event) => {
-      let currentScrollTop = event.target.scrollTop;
+    const currentPath = location.pathname;
+    const sectionId = pathToSection[currentPath];
 
-      if (currentScrollTop > lastScrollTop) {
-        setIsVisible(false);
-      } else if (currentScrollTop < lastScrollTop) {
-        setIsVisible(true);
+    if (sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: 'smooth' });
+          setActiveNav(sectionId);
+        }, 100);
       }
 
-      lastScrollTop = currentScrollTop;
-    };
-
-    container.addEventListener('scroll', isScrolling);
-
-    return () => {
-      container.removeEventListener('scroll', isScrolling);
-    };
-  }, [lastScrollTop]);
-
-  // Map pathname to 'activeNav' string for compatibility with existing Nav component
-  let activeNav = 'Home';
-  if (location.pathname === '/about') activeNav = 'About';
-  if (location.pathname === '/product') activeNav = 'Product';
-  if (location.pathname === '/benefits') activeNav = 'Benefits';
+      // Update URL to root after scrolling (optional - keeps it clean)
+      // Comment this out if you want the URL to stay as /product
+      // if (currentPath !== '/') {
+      //   navigate('/', { replace: true });
+      // }
+    }
+  }, [location.pathname]);
 
   return (
-    <div className="app" ref={containerRef}>
-      <AnimatePresence>
-        <motion.div
-          key={isVisible}
-          initial={{ opacity: 0, y: -60 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -60 }}
-          transition={{ duration: 0.4, ease: 'easeInOut' }}
-          className={isVisible ? 'header' : 'header'}
-          style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}
-        >
-          <Nav activeNav={activeNav} containerRef={containerRef} />
-        </motion.div>
-      </AnimatePresence>
+    <div className="app" ref={containerRef} >
+      <div className={'header'} >
+        <Nav activeNav={activeNav} setActiveNav={setActiveNav} containerRef={containerRef} />
+      </div>
 
       <div className="main">
-        <Routes>
-          <Route path="/" element={
-            <div className="activeSection">
-              <Home />
-            </div>
-          } />
-          <Route path="/home" element={<Navigate to="/" replace />} />
-          <Route path="/about" element={
-            <div className="activeSection">
-              <About />
-            </div>
-          } />
-          <Route path="/product" element={
-            <div className="activeSection">
-              <Product />
-            </div>
-          } />
-          <Route path="/benefits" element={<Navigate to="/product" replace />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <div className={activeNav === 'Home' ? 'home active' : 'home'}>
+          <Home setActiveNav={setActiveNav} />
+        </div>
+        <div className={activeNav === 'About' ? 'about active' : 'about'}>
+          <About />
+        </div>
+        <div className={activeNav === 'Product' ? 'product active' : 'product'}>
+          <Product />
+        </div>
       </div>
 
       <div className="footer">
-        <Footer activeNav={activeNav} />
+        <Footer />
       </div>
     </div>
   );

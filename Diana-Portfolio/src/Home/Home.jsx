@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import styles from './Home.module.css';
 
 const Home = () => {
@@ -38,8 +37,8 @@ const Home = () => {
                     <p>Im a <span>home cook</span> sharing simple, nourishing meals and everyday habits to support a <span>healthier lifestyle.</span> Ready to level up? Get my eBook and start building your healthiest routine, <span>one meal at a time.</span></p>
                 </div>
                 <div className={styles.cta}>
-                    <Link to="/about" className={styles.btnOutline}>Learn More</Link>
-                    <Link to="/product" className={styles.btnFilled}>BUY PRODUCT</Link>
+                    <a href="#About" className={styles.btnOutline}>Learn More</a>
+                    <a href="#Product" className={styles.btnFilled}>BUY PRODUCT</a>
                 </div>
 
                 <div className={styles.scrollMore}>

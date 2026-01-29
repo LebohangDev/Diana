@@ -1,28 +1,21 @@
 import { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from './Nav.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Nav = ({ activeNav, containerRef }) => {
+const Nav = ({ activeNav, setActiveNav, containerRef }) => {
     const [hamMenu, setHamMenu] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
+    const navigate = useNavigate();
 
     let lastScrollTop = 0;
 
-
     useEffect(() => {
-
         const container = containerRef.current;
 
-
         const isScrolling = (event) => {
-
-
-
-
             let currentScrollTop = event.target.scrollTop;
 
-            // if currentScroll top is greater that last know scroll top postion set nav as visible else hidden
             if (currentScrollTop > lastScrollTop) {
                 setIsVisible(false);
                 console.log("scrolling down")
@@ -31,25 +24,22 @@ const Nav = ({ activeNav, containerRef }) => {
                 console.log("scrolling up")
             }
 
-            // update lastScrollTop to currentscrll top 
             lastScrollTop = currentScrollTop;
-
         }
-
 
         container.addEventListener('scroll', isScrolling);
 
         return () => {
             container.removeEventListener('scroll', isScrolling);
         }
+    }, [lastScrollTop]);
 
-    }, [lastScrollTop]); // rune everytime isvisbile changes 
-
-
-
+    const handleNavClick = (path, section) => {
+        navigate(path);
+        setActiveNav(section);
+    };
 
     return (
-
         <>
             <AnimatePresence>
                 <motion.div
@@ -60,7 +50,6 @@ const Nav = ({ activeNav, containerRef }) => {
                     transition={{ duration: 0.4, ease: 'easeInOut' }}
                     className={isVisible === true ? styles.navContainer : styles.navContainer_hidden}
                 >
-
                     <nav >
                         <ul>
                             <div className={styles.nav_logo}>
@@ -68,16 +57,16 @@ const Nav = ({ activeNav, containerRef }) => {
                             </div>
                             <div className={styles.nav_links}>
                                 <li className={activeNav === 'Home' ? styles.active : ''}>
-                                    <Link to="/">Home</Link>
+                                    <a href="#Home" onClick={(e) => { e.preventDefault(); handleNavClick('/', 'Home'); }}>Home</a>
                                 </li>
                                 <li className={activeNav === 'About' ? styles.active : ''}>
-                                    <Link to="/about">About</Link>
+                                    <a href="#About" onClick={(e) => { e.preventDefault(); handleNavClick('/about', 'About'); }}>About</a>
                                 </li>
                                 <li className={activeNav === 'Product' ? styles.active : ''}>
-                                    <Link to="/product">Product</Link>
+                                    <a href="#Product" onClick={(e) => { e.preventDefault(); handleNavClick('/product', 'Product'); }}>Product</a>
                                 </li>
                                 <li className={activeNav === 'Benefits' ? styles.active : ''}>
-                                    <Link to="/product">Benefits</Link>
+                                    <a href="#Benefits" onClick={(e) => { e.preventDefault(); handleNavClick('/product', 'Benefits'); }}>Benefits</a>
                                 </li>
                             </div>
                             <div className={styles.nav_contact}>
@@ -90,8 +79,6 @@ const Nav = ({ activeNav, containerRef }) => {
                             </div>
                         </ul>
                     </nav>
-
-
                 </motion.div>
             </AnimatePresence>
 
@@ -124,19 +111,19 @@ const Nav = ({ activeNav, containerRef }) => {
                             <ul>
                                 <li>
                                     <i class="ri-home-6-line"></i>
-                                    <Link to="/" onClick={() => setHamMenu(false)}>Home</Link>
+                                    <a href="#Home" onClick={(e) => { e.preventDefault(); handleNavClick('/', 'Home'); setHamMenu(false); }}>Home</a>
                                 </li>
                                 <li>
                                     <i class="ri-user-3-line"></i>
-                                    <Link to="/about" onClick={() => setHamMenu(false)}>About</Link>
+                                    <a href="#About" onClick={(e) => { e.preventDefault(); handleNavClick('/about', 'About'); setHamMenu(false); }}>About</a>
                                 </li>
                                 <li>
                                     <i class="ri-shopping-cart-2-line"></i>
-                                    <Link to="/product" onClick={() => setHamMenu(false)} >Product</Link>
+                                    <a href="#Product" onClick={(e) => { e.preventDefault(); handleNavClick('/product', 'Product'); setHamMenu(false); }}>Product</a>
                                 </li>
                                 <li>
                                     <i class="ri-star-line"></i>
-                                    <Link to="/product" onClick={() => setHamMenu(false)} >Benefits</Link>
+                                    <a href="#Benefits" onClick={(e) => { e.preventDefault(); handleNavClick('/product', 'Benefits'); setHamMenu(false); }}>Benefits</a>
                                 </li>
                             </ul>
 
