@@ -162,10 +162,11 @@ const Product = () => {
                     {/* Left Side: Learn More */}
                     <div className={styles.benefitsLeft}>
                         <h2>Benefits</h2>
-                        <p>Not just recipes — real pastry skills that upgrade your desserts, your workflow, and your confidence.</p>
+                        <p>helps you feel better in your body, eat with confidence, and build healthy habits that actually fit into your life — without pressure, guilt, or extremes.</p>
 
                         <a href="#Product">
-                            <button className={styles.orderBtn}>Order ebook</button>
+                            <button className={styles.orderBtn}>Order ebook<i class="ri-shopping-bag-3-line"></i></button>
+
                         </a>
 
                         <div className={styles.bookStack}>

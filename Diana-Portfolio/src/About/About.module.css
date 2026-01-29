@@ -33,9 +33,9 @@
 }
 
 .header h1 {
-    font-family: var(--font-sub);
-    /* Serif Display */
-    font-size: 3rem;
+
+
+    font-size: 4rem;
     font-weight: 400;
     /* Regular */
     color: var(--text-header);
@@ -43,13 +43,12 @@
     line-height: 1.2;
 }
 
-/* Divider Line */
 .header hr {
-    width: 160px;
-    /* Width of title approx */
+    width: 400px;
+
     border: none;
-    border-bottom: 1px solid #cccccc;
-    /* Medium Gray */
+    border-bottom: 2px solid #000000;
+
     margin-top: 0.5rem;
 }
 
@@ -57,19 +56,19 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    /* Noticeable vertical gap */
+
     margin-bottom: 3rem;
-    max-width: 450px;
-    /* Narrow line length */
+    max-width: 550px;
+
 }
 
 .description p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.7;
-    /* Comfortable */
+
     color: #333333;
-    /* Dark Gray */
+
     margin: 0;
 }
 
@@ -86,7 +85,7 @@
     color: var(--accent-span);
     /* #75C089 */
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -157,10 +156,10 @@
     position: relative;
     width: 100%;
     height: 600px;
-    /* Specific height for positioning */
+
     display: flex;
     justify-content: center;
-    /* Helper */
+    align-items: flex-start;
 }
 
 .imgContainer {
@@ -179,7 +178,7 @@
     border-radius: 0;
 }
 
-/* Image 1: Gym/Background (Top Left-ish) */
+
 .imgContainer img:nth-child(1) {
     width: 55%;
     height: auto;
@@ -189,23 +188,23 @@
     z-index: 1;
 }
 
-/* Image 2: Salad/Foreground (Top Right-ish) */
+
 .imgContainer img:nth-child(2) {
     width: 50%;
     height: auto;
     aspect-ratio: 3/4;
-    top: 5%;
+    top: 8%;
     right: 0;
     z-index: 2;
 }
 
-/* Image 3: Plate/Face (Bottom Center, Dominate) */
+
 .imgContainer img:nth-child(3) {
     width: 60%;
     height: auto;
     aspect-ratio: 4/5;
-    bottom: 0;
-    left: 20%;
+    bottom: -20%;
+    left: 10%;
     z-index: 3;
 }
 
@@ -215,7 +214,7 @@
 /* PHONES (max-width: 767px) */
 @media (max-width: 767px) {
     .aboutContainer {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(100%, 1fr);
         padding: 4rem 1rem;
         gap: 3rem;
     }
@@ -224,8 +223,13 @@
         padding: 0 1rem;
     }
 
+    .header h1 {
+        font-size: 3rem;
+    }
+
     .header hr {
         margin: 0.5rem auto 0 auto;
+        max-width: 300px;
     }
 
     .emailField {
@@ -268,6 +272,8 @@
         grid-template-columns: 1fr;
         text-align: center;
         gap: 5rem;
+        padding-top: 2rem;
+        padding-bottom: 15rem;
     }
 
     .header hr {
@@ -297,5 +303,50 @@
 
     .section2 {
         height: 500px;
+    }
+}
+
+
+
+/* iPad Pro PORTRAIT only */
+@media only screen and (device-width: 1024px) and (device-height: 1366px) and (orientation: portrait) {
+    .aboutContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imgContainer:nth-child(1) {
+
+        left: 0;
+    }
+
+
+    /* Image 1: Gym/Background (Top Left-ish) */
+    .imgContainer img:nth-child(1) {
+        width: 55%;
+        height: auto;
+        aspect-ratio: 3/4;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    /* Image 2: Salad/Foreground (Top Right-ish) */
+    .imgContainer img:nth-child(2) {
+        width: 50%;
+        height: auto;
+        aspect-ratio: 3/4;
+        top: 8%;
+        right: 5%;
+        z-index: 2;
+    }
+
+    /* Image 3: Plate/Face (Bottom Center, Dominate) */
+    .imgContainer img:nth-child(3) {
+        width: 60%;
+        height: auto;
+        aspect-ratio: 4/5;
+        bottom: 15%;
+        left: 10%;
+        z-index: 3;
     }
 }

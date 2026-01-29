@@ -1,8 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Nav.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Nav = ({ activeNav, setActiveNav, containerRef }) => {
+const Nav = ({ activeNav, containerRef }) => {
     const [hamMenu, setHamMenu] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
 
@@ -15,7 +16,6 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
 
 
         const isScrolling = (event) => {
-
 
 
 
@@ -48,7 +48,6 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
 
 
 
-
     return (
 
         <>
@@ -69,16 +68,16 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                             </div>
                             <div className={styles.nav_links}>
                                 <li className={activeNav === 'Home' ? styles.active : ''}>
-                                    <a href="#Home" onClick={() => setActiveNav('Home')}>Home</a>
+                                    <Link to="/">Home</Link>
                                 </li>
                                 <li className={activeNav === 'About' ? styles.active : ''}>
-                                    <a href="#About" onClick={() => setActiveNav('About')}>About</a>
+                                    <Link to="/about">About</Link>
                                 </li>
                                 <li className={activeNav === 'Product' ? styles.active : ''}>
-                                    <a href="#Product" onClick={() => setActiveNav('Product')} >Product</a>
+                                    <Link to="/product">Product</Link>
                                 </li>
                                 <li className={activeNav === 'Benefits' ? styles.active : ''}>
-                                    <a href="#Benefits" onClick={() => setActiveNav('Benefits')} >Benefits</a>
+                                    <Link to="/product">Benefits</Link>
                                 </li>
                             </div>
                             <div className={styles.nav_contact}>
@@ -125,19 +124,19 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                             <ul>
                                 <li>
                                     <i class="ri-home-6-line"></i>
-                                    <a href="#Home" onClick={() => { setActiveNav('Home'); setHamMenu(false); }}>Home</a>
+                                    <Link to="/" onClick={() => setHamMenu(false)}>Home</Link>
                                 </li>
                                 <li>
                                     <i class="ri-user-3-line"></i>
-                                    <a href="#About" onClick={() => { setActiveNav('About'); setHamMenu(false); }}>About</a>
+                                    <Link to="/about" onClick={() => setHamMenu(false)}>About</Link>
                                 </li>
                                 <li>
                                     <i class="ri-shopping-cart-2-line"></i>
-                                    <a href="#Product" onClick={() => { setActiveNav('Product'); setHamMenu(false); }} >Product</a>
+                                    <Link to="/product" onClick={() => setHamMenu(false)} >Product</Link>
                                 </li>
                                 <li>
                                     <i class="ri-star-line"></i>
-                                    <a href="#Benefits" onClick={() => { setActiveNav('Benefits'); setHamMenu(false); }} >Benefits</a>
+                                    <Link to="/product" onClick={() => setHamMenu(false)} >Benefits</Link>
                                 </li>
                             </ul>
 
@@ -148,21 +147,24 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                                 </h1>
 
                                 <div className={styles.socials}>
+                                    <a href="https://www.linkedin.com/in/dianazavzeatii/" target="_blank" rel="noreferrer">
+                                        <i className="ri-linkedin-box-fill"></i>
+                                    </a>
                                     <a href="https://www.instagram.com/dianaray_vlogs/" target="_blank" rel="noreferrer">
-                                        <i className="ri-instagram-line"></i>
+                                        <i className="ri-instagram-fill"></i>
+                                    </a>
+                                    <a href="https://www.tiktok.com/@busyavocado" target="_blank" rel="noreferrer">
+                                        <i className="ri-tiktok-line"></i>
                                     </a>
                                     <a href="https://www.facebook.com/hijabigram" target="_blank" rel="noreferrer">
-                                        <i className="ri-facebook-line"></i>
-                                    </a>
-                                    <a href="https://www.youtube.com/@Dianaray_vlogs" target="_blank" rel="noreferrer">
-                                        <i className="ri-youtube-line"></i>
+                                        <i className="ri-facebook-circle-fill"></i>
                                     </a>
                                 </div>
                             </div>
 
                             <div className={styles.copyright}>
                                 <p>
-                                    © 2025 CreatorsBlueprint. All rights reserved. | www.creatorsblueprint.com
+                                    © 2026 Diana Zavzeatii. All rights reserved. | www.creatorsblueprint.net
                                 </p>
                             </div>
                         </motion.div>

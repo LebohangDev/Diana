@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -11,13 +12,13 @@ const Footer = () => {
                     <div className={styles.media}>
                         <p>Media</p>
                         <div className={styles.socialIcons}>
-                            <a href="https://www.instagram.com/dianaray_vlogs/" target="_blank" rel="noreferrer">
+                            <a href="https://www.linkedin.com/in/dianazavzeatii/" target="_blank" rel="noreferrer">
                                 <i class="ri-linkedin-box-fill"></i>
                             </a>
-                            <a href="https://www.youtube.com/@Dianaray_vlogs" target="_blank" rel="noreferrer">
+                            <a href="https://www.instagram.com/dianaray_vlogs/" target="_blank" rel="noreferrer">
                                 <i class="ri-instagram-fill"></i>
                             </a>
-                            <a href="https://www.facebook.com/hijabigram" target="_blank" rel="noreferrer">
+                            <a href="https://www.tiktok.com/@busyavocado" target="_blank" rel="noreferrer">
                                 <i class="ri-tiktok-line"></i>
                             </a>
                             <a href="https://www.facebook.com/hijabigram" target="_blank" rel="noreferrer">
@@ -28,17 +29,17 @@ const Footer = () => {
                     </div>
                     <div className={styles.footerNav}>
                         <ul>
-                            <li><a href="#Home">Home</a></li>
-                            <li><a href="#About">About</a></li>
-                            <li><a href="#Product">Product</a></li>
-                            <li><a href="#Benefits">Benefits</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/about">About</Link></li>
+                            <li><Link to="/product">Product</Link></li>
+                            <li><Link to="/product">Benefits</Link></li>
                         </ul>
                     </div>
                 </div>
 
             </div>
             <hr />
-            <p>© 2025 Diana Zavzeatii. All rights reserved. | www.creatorsblueprint.net</p>
+            <p>© 2026 Diana Zavzeatii. All rights reserved. | www.creatorsblueprint.net</p>
 
 
 

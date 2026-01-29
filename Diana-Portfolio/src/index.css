@@ -44,7 +44,7 @@ body {
   --cta-primary: #3B6255;
   /* Dark Green - Primary Buttons */
 
-  --font-display: 'Crimson Text', serif;
+  --font-display: 'Libre Bodoni', serif;
   /* H1 */
   --font-sub: 'Libre Bodoni', serif;
   /* Subheadings */
@@ -63,7 +63,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Libre Bodoni', serif;
+  font-family: 'Crimson Text', serif;
   color: var(--text-header);
   font-weight: 700;
 }

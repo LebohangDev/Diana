@@ -309,25 +309,38 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 0.8rem;
     }
 
     .hamMenuActive .media h1 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 1rem;
-        color: var(--text-muted);
-        text-transform: uppercase;
+        font-size: 1.2rem;
         letter-spacing: 2px;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
     }
 
     .hamMenuActive .media .socials {
         display: flex;
-        gap: 1.5rem;
+        gap: 1rem;
+    }
+
+    .hamMenuActive .media .socials a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .hamMenuActive .media .socials i {
-        font-size: 1.5rem;
-        color: #800000;
+        font-size: 1.8rem;
+        color: #FFFFFF;
+        transition: all 0.2s ease;
+    }
+
+    .hamMenuActive .media .socials i:hover {
+        color: #ffffff;
+        transform: scale(1.1);
     }
 
     .hamMenuActive .copyright p {
