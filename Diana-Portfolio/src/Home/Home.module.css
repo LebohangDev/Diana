@@ -21,6 +21,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+
 }
 
 
@@ -34,13 +35,13 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 2rem;
+    padding-top: 100rem;
+
     max-width: 1000px;
     margin: 0 auto;
     color: #ffffff;
     gap: 1.5rem;
-    padding-top: 4rem;
-    /* Offset for nav */
+    padding-top: 6rem;
 }
 
 /* Keywords Row */
@@ -48,14 +49,13 @@
     display: flex;
     gap: 2rem;
     margin-bottom: 0px;
-    /* Reduced margin */
 }
 
 .subHeading p {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #ffffff;
-    text-transform: uppercase;
+
     letter-spacing: 1px;
     margin: 0;
 }
@@ -68,20 +68,16 @@
 }
 
 .name h1 {
-
-    font-size: 8.5rem;
-    /* Much bigger */
+    font-size: 6rem;
     font-weight: 700;
     margin: 0;
     line-height: 0.9;
     color: #ffffff;
     margin-top: -15px;
-    /* Pull tighter */
 }
 
 .name p {
     font-family: var(--font-sub);
-    /* Libre Bodoni */
     font-size: 1.5rem;
     font-style: italic;
     color: #ffffff;
@@ -90,7 +86,6 @@
 
 .name span {
     color: var(--accent-span);
-    /* #75C089 */
     font-weight: 600;
     font-style: normal;
 }
@@ -115,8 +110,8 @@
 
 .socials i {
     font-size: 1.5rem;
-    color: var(--accent);
-    /* #D2C49E */
+    color: var(--brand-primary);
+    /* #8AB086 Brand Green */
     transition: transform 0.2s;
     cursor: pointer;
 }
@@ -132,7 +127,7 @@
 }
 
 .description p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     font-size: 1.1rem;
     line-height: 1.6;
     color: #f0f0f0;
@@ -140,7 +135,6 @@
 
 .description span {
     color: var(--accent-span);
-    /* #75C089 */
     font-weight: 600;
 }
 
@@ -154,10 +148,9 @@
 .btnOutline {
     padding: 0.8rem 2.5rem;
     border: 2px solid var(--text-light);
-    /* #D2C49E */
     background: transparent;
     color: #ffffff;
-    font-family: 'Lato', sans-serif;
+    font-family: 'League Spartan', sans-serif;
 
     font-size: 0.9rem;
 
@@ -167,17 +160,16 @@
 }
 
 .btnOutline:hover {
-    background: var(--accent);
+    background: var(--brand-primary);
     color: #1a1a1a;
 }
 
 .btnFilled {
     padding: 0.8rem 2.5rem;
     background-color: var(--cta-primary);
-    /* #3B6255 */
     border: 1px solid var(--cta-primary);
     color: #ffffff;
-    font-family: 'Lato', sans-serif;
+    font-family: 'League Spartan', sans-serif;
 
     font-size: 0.9rem;
 

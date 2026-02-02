@@ -3,14 +3,11 @@
 .aboutContainer {
     width: 100%;
     background-color: #FFFFFF;
-    /* Pure White */
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
-    /* 2 Columns: Left Narrower, Right Wider */
     max-width: 1300px;
     margin: 0 auto;
     padding: 8rem 2rem;
-    /* Breathing gap */
     gap: 4rem;
     align-items: center;
 }
@@ -33,11 +30,8 @@
 }
 
 .header h1 {
-
-
     font-size: 4rem;
     font-weight: 400;
-    /* Regular */
     color: var(--text-header);
     margin: 0;
     line-height: 1.2;
@@ -45,10 +39,8 @@
 
 .header hr {
     width: 400px;
-
     border: none;
     border-bottom: 2px solid #000000;
-
     margin-top: 0.5rem;
 }
 
@@ -56,19 +48,15 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
     margin-bottom: 3rem;
     max-width: 550px;
-
 }
 
 .description p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     font-size: 1.2rem;
     line-height: 1.7;
-
     color: #333333;
-
     margin: 0;
 }
 
@@ -83,8 +71,7 @@
 
 .accentLine {
     color: var(--accent-span);
-    /* #75C089 */
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -92,7 +79,6 @@
 
 .ebookCover {
     width: 280px;
-    /* Medium-large */
     height: auto;
     object-fit: contain;
     margin-bottom: 1.5rem;
@@ -105,7 +91,6 @@
     width: 100%;
     max-width: 400px;
     gap: 1rem;
-    /* Roughly book width */
 }
 
 /* Email Valid */
@@ -115,7 +100,7 @@
 
 /*invalid*/
 .emailField p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     font-size: 0.85rem;
     color: #c91111;
     margin: 0;
@@ -128,14 +113,12 @@
 .emailField input {
     flex: 1;
     background-color: #F2F2F2;
-    /* Light Gray */
     border: none;
     padding: 1rem 1.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     font-size: 0.9rem;
     color: #333;
     border-radius: 4px 0 0 4px;
-    /* Left radius only */
 }
 
 .emailField input::placeholder {
@@ -154,14 +137,13 @@
     color: #fff;
     border: none;
     padding: 1rem 1.5rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 0.8rem;
     letter-spacing: 1px;
     cursor: pointer;
     border-radius: 0 4px 4px 0;
-    /* Right radius only */
     white-space: nowrap;
     transition: background 0.2s;
 }
@@ -206,7 +188,6 @@
     position: absolute;
     object-fit: cover;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    /* Square corners per spec */
     border-radius: 0;
 }
 

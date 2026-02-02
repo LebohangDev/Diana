@@ -72,7 +72,7 @@
 
 .nav_links li a {
     text-decoration: none;
-    font-family: 'Crimson Text', serif;
+    font-family: 'League Spartan', sans-serif;
     /* Updated Font */
     font-size: 1.1rem;
     /* Slightly larger for Crimson Text readability */
@@ -141,7 +141,7 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     font-size: 0.9rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'League Spartan', sans-serif;
 
 
     letter-spacing: 0.5px;
@@ -235,7 +235,7 @@
     }
 
     .hamHeader h2 {
-        font-family: 'Libre Bodoni', serif;
+        font-family: 'League Spartan', sans-serif;
         font-size: 2rem;
         color: var(--text-header);
         margin: 0;
@@ -256,7 +256,8 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: var(--bg-primary);
+        background-color: var(--bg-product);
+        /* Brand Green */
         z-index: 2000;
         display: flex;
         flex-direction: column;
@@ -272,7 +273,8 @@
         width: 30px;
         height: 30px;
         cursor: pointer;
-        filter: brightness(0);
+        filter: brightness(0) invert(1);
+        /* White close icon */
     }
 
     .hamMenuActive ul {
@@ -292,10 +294,11 @@
     }
 
     .hamMenuActive ul li a {
-        font-family: 'Libre Bodoni', serif;
+        font-family: 'League Spartan', sans-serif;
         font-size: 2.5rem;
         /* Large mobile text */
-        color: var(--text-header);
+        color: #FFFFFF;
+        /* White text */
         text-decoration: none;
     }
 
@@ -313,10 +316,10 @@
     }
 
     .hamMenuActive .media h1 {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'League Spartan', sans-serif;
         font-size: 1.2rem;
         letter-spacing: 2px;
-        color: rgba(255, 255, 255, 0.9);
+        color: #FFFFFF;
         margin: 0;
     }
 
@@ -341,12 +344,13 @@
     .hamMenuActive .media .socials i:hover {
         color: #ffffff;
         transform: scale(1.1);
+        opacity: 0.8;
     }
 
     .hamMenuActive .copyright p {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'League Spartan', sans-serif;
         font-size: 0.8rem;
-        color: var(--text-muted);
+        color: rgba(255, 255, 255, 0.8);
         text-align: center;
     }
 }

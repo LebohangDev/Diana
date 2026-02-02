@@ -21,26 +21,17 @@ const Home = () => {
                 animate="visible"
             >
                 <motion.div className={styles.subHeading} variants={staggerItem}>
-                    <p>Nourishing</p>
-                    <p>Intentional</p>
-                    <p>Real Life Healthy</p>
+                    <p>Simple</p>
+                    <p>Real-life</p>
+                    <p>Repeatable</p>
                 </motion.div>
                 <motion.div className={styles.name} variants={staggerItem}>
-                    <h1>Diana Zavzeatii.</h1>
-                    <p>Also Known as <span>BusyAvacado</span></p>
+                    <h1>Busy Avocado Kitchen</h1>
+                    <p>By <span>Diana Zavzeatii</span></p>
                 </motion.div>
                 <motion.div className={styles.socials} variants={staggerItem}>
                     <motion.a
-                        href="https://www.linkedin.com/in/dianazavzeatii/"
-                        target="_blank"
-                        rel="noreferrer"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        <i class="ri-linkedin-box-fill"></i>
-                    </motion.a>
-                    <motion.a
-                        href="https://www.instagram.com/dianaray_vlogs/"
+                        href="https://www.instagram.com/busyavocado/"
                         target="_blank"
                         rel="noreferrer"
                         whileHover={{ scale: 1.1, rotate: -5 }}
@@ -57,18 +48,9 @@ const Home = () => {
                     >
                         <i class="ri-tiktok-line"></i>
                     </motion.a>
-                    <motion.a
-                        href="https://www.facebook.com/hijabigram"
-                        target="_blank"
-                        rel="noreferrer"
-                        whileHover={{ scale: 1.1, rotate: -5 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        <i class="ri-facebook-circle-fill"></i>
-                    </motion.a>
                 </motion.div>
                 <motion.div className={styles.description} variants={staggerItem}>
-                    <p>Im a <span>home cook</span> sharing simple, nourishing meals and everyday habits to support a <span>healthier lifestyle.</span> Ready to level up? Get my eBook and start building your healthiest routine, <span>one meal at a time.</span></p>
+                    <p>Back in 2016, I created Busy Avocado as a social media page where I share my life and the food I cook. Over the past ten years, I've shared many recipes, and this book is a collection of the ones I love the most: realistic, repeatable meals that are satisfying to eat and easy to fit into everyday life, perfect for busy people, beginners, and anyone who prefers a practical approach to cooking.</p>
                 </motion.div>
                 <motion.div className={styles.cta} variants={staggerItem}>
                     <motion.a
@@ -85,7 +67,7 @@ const Home = () => {
                         whileHover={buttonHover}
                         whileTap={buttonTap}
                     >
-                        BUY PRODUCT
+                        Get the Ebook
                     </motion.a>
                 </motion.div>
 

@@ -70,11 +70,11 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                                 </li>
                             </div>
                             <div className={styles.nav_contact}>
-                                <a href="https://www.instagram.com/dianaray_vlogs/" target="_blank" rel="noreferrer" className={styles.portfolioBtn}>
-                                    Portfolio
+                                <a href="https://www.instagram.com/busyavocado/" target="_blank" rel="noreferrer" className={styles.portfolioBtn}>
+                                    Contact
                                 </a>
-                                <a href="https://www.instagram.com/dianaray_vlogs/" target="_blank" rel="noreferrer" className={styles.iconBtn}>
-                                    <i className="ri-arrow-right-up-line"></i>
+                                <a href="https://www.tiktok.com/@busyavocado" target="_blank" rel="noreferrer" className={styles.iconBtn}>
+                                    <i class="ri-arrow-right-up-line"></i>
                                 </a>
                             </div>
                         </ul>
@@ -134,17 +134,11 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                                 </h1>
 
                                 <div className={styles.socials}>
-                                    <a href="https://www.linkedin.com/in/dianazavzeatii/" target="_blank" rel="noreferrer">
-                                        <i className="ri-linkedin-box-fill"></i>
-                                    </a>
-                                    <a href="https://www.instagram.com/dianaray_vlogs/" target="_blank" rel="noreferrer">
+                                    <a href="https://www.instagram.com/busyavocado/" target="_blank" rel="noreferrer">
                                         <i className="ri-instagram-fill"></i>
                                     </a>
                                     <a href="https://www.tiktok.com/@busyavocado" target="_blank" rel="noreferrer">
                                         <i className="ri-tiktok-line"></i>
-                                    </a>
-                                    <a href="https://www.facebook.com/hijabigram" target="_blank" rel="noreferrer">
-                                        <i className="ri-facebook-circle-fill"></i>
                                     </a>
                                 </div>
                             </div>

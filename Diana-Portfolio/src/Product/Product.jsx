@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+﻿import React, { useState, useRef } from 'react';
 import { motion } from "framer-motion";
 import styles from './Product.module.css';
 
@@ -14,28 +14,28 @@ const Product = () => {
 
     const benefitsItems = [
         {
-            description: "Support your energy, digestion, and overall wellbeing with simple, nourishing habits you can maintain daily.",
-            icon: "ri-lightbulb-flash-fill"
+            description: "Enjoy cooking more by keeping meals simple, familiar, and worth repeating.",
+            icon: "ri-restaurant-2-line"
         },
         {
-            description: "Build healthy routines around food and lifestyle that feel natural, realistic, and easy to stick to.",
+            description: "Build easy routines around food that fit into real schedules and busy days.",
             icon: "ri-calendar-check-line"
         },
         {
-            description: "Feel confident making healthier food choices without stress, guilt, or overthinking.",
-            icon: "ri-shield-flash-fill"
+            description: "Feel more confident in the kitchen without stressing over 'doing it right.'",
+            icon: "ri-shield-star-line"
         },
         {
-            description: "Create a balanced lifestyle where you enjoy food while taking care of your body long-term.",
-            icon: "ri-scales-3-fill"
+            description: "Shift naturally from ordering in to cooking at home more often.",
+            icon: "ri-home-heart-line"
         },
         {
-            description: "Reduce stress around food by letting go of confusion, pressure, and all-or-nothing thinking.",
-            icon: "ri-windy-line"
+            description: "Take the pressure off food by focusing on what works for you, not strict rules.",
+            icon: "ri-heart-3-line"
         },
         {
-            description: "Stay consistent with healthy habits even on busy days, social occasions, and real-life schedules.",
-            icon: "ri-battery-2-charge-line"
+            description: "Stay consistent with home cooking even when life is busy, social, or unpredictable.",
+            icon: "ri-time-line"
         }
     ];
 
@@ -43,11 +43,11 @@ const Product = () => {
     const [isEmailValid, setIsEmailValid] = useState(false);
 
     const productInfo = {
-        title: "From Everyday Meals to a Healthier Lifestyle",
-        amount: 10,
+        title: "Food for Real Life",
+        amount: 19,
         currency: "USD",
-        successUrl: "https://lebohangdev.github.io/Diana/?payment=success",
-        cancelUrl: "https://lebohangdev.github.io/Diana/?payment=cancel",
+        successUrl: "https://busyavocado.com/?payment=success",
+        cancelUrl: "https://busyavocado.com/?payment=cancel",
     };
 
     const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.toLowerCase());
@@ -95,7 +95,7 @@ const Product = () => {
                 viewport={{ once: true }}
             >
                 <h1>Busy Avocado Kitchen</h1>
-                <p>A realistic framework for eating well without overthinking it</p>
+                <p>A realistic way to eat well without overthinking it.</p>
             </motion.div>
 
             {/* MAIN PRODUCT CONTENT */}
@@ -115,7 +115,7 @@ const Product = () => {
 
                     <div className={styles.ProductContentBody}>
                         <h1>{productInfo.title}</h1>
-                        <p>Healthy living doesn’t need to be complicated. I share simple, nourishing recipes and everyday habits that fit into real life. Everything starts in your own kitchen — with food that’s easy to make, enjoyable to eat, and supportive of your long-term wellbeing.</p>
+                        <p>Busy Avocado is about enjoying good food without overcomplicating it. Here you'll find everyday recipes and simple kitchen ideas designed to fit into real routines: meals that feel good to cook, good to eat, and easy to come back to.</p>
 
                         <div className={styles.ProductContentBodyButton}>
                             <p className={email && !isEmailValid ? styles.invalidEmail : styles.validEmail}>
@@ -133,18 +133,18 @@ const Product = () => {
                                 onClick={() => { handleZinnaPayment(); setEmail(''); }}
                                 className={!isEmailValid ? styles.disabled : ''}
                             >
-                                GET STARTED NOW!
+                                Buy the Ebook
                             </button>
                         </div>
 
                         <div className={styles.ProductContentPrice}>
                             <div className={styles.price}>
                                 <p>Price</p>
-                                <p>${productInfo.amount}</p>
+                                <p>USD {productInfo.amount}</p>
                             </div>
 
                             <div className={styles.why} onClick={scrollToBenefits}>
-                                <p>Why buy this Ebook?</p>
+                                <p>Why get this Ebook?</p>
                                 <i className="ri-arrow-down-circle-line"></i>
                             </div>
                         </div>
@@ -169,7 +169,7 @@ const Product = () => {
                     {/* Left Side: Learn More */}
                     <div className={styles.benefitsLeft}>
                         <h2>Benefits</h2>
-                        <p>helps you feel better in your body, eat with confidence, and build healthy habits that actually fit into your life — without pressure, guilt, or extremes.</p>
+                        <p>Helps you enjoy cooking more, shift from ordering in to cooking at home, and build habits that fit naturally into your everyday life without pressure, guilt, or extremes.</p>
 
                         <a href="#Product">
                             <button className={styles.orderBtn}>Order ebook<i class="ri-shopping-bag-3-line"></i></button>

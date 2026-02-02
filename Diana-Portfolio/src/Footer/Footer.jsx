@@ -13,15 +13,6 @@ const Footer = () => {
                         <p>Media</p>
                         <div className={styles.socialIcons}>
                             <motion.a
-                                href="https://www.linkedin.com/in/dianazavzeatii/"
-                                target="_blank"
-                                rel="noreferrer"
-                                whileHover={{ scale: 1.15, y: -3 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                <i class="ri-linkedin-box-fill"></i>
-                            </motion.a>
-                            <motion.a
                                 href="https://www.instagram.com/dianaray_vlogs/"
                                 target="_blank"
                                 rel="noreferrer"
@@ -39,16 +30,6 @@ const Footer = () => {
                             >
                                 <i class="ri-tiktok-line"></i>
                             </motion.a>
-                            <motion.a
-                                href="https://www.facebook.com/hijabigram"
-                                target="_blank"
-                                rel="noreferrer"
-                                whileHover={{ scale: 1.15, y: -3 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                <i class="ri-facebook-circle-fill"></i>
-                            </motion.a>
-
                         </div>
                     </div>
                     <div className={styles.footerNav}>

@@ -5,10 +5,8 @@
 /* Main Container - Green Background */
 .ProductContainer {
     background-color: var(--bg-product);
-    /* #8BA49A Green */
     width: 100%;
     padding: 3rem 0 0 0;
-    /* Padding top only, let benefits handle bottom */
     overflow: hidden;
     position: relative;
 }
@@ -25,18 +23,15 @@
 }
 
 .ProductHeader h1 {
-
-
     font-size: 4rem;
     color: #ffffff;
     font-weight: 400;
-
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .ProductHeader p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     font-size: 1.2rem;
     width: 50%;
     margin: 0 auto;
@@ -65,18 +60,13 @@
 .ProductContentHeader h1 {
     font-size: 1rem;
     color: #fff;
-    background: var(--accent);
-    /* #D2C49E Gold */
+    background: var(--brand-primary);
     width: fit-content;
-    padding: 0.8rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
+    padding: 0.8rem 1rem;
     margin: 0;
-
     letter-spacing: 1px;
     font-weight: 700;
-    font-family: 'Lato', sans-serif;
+    font-family: 'League Spartan', sans-serif;
 }
 
 
@@ -85,19 +75,17 @@
     font-weight: 500;
     line-height: 1.1;
     color: #ffffff;
-
     margin: 0;
 }
 
 .ProductContentBody p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     font-size: 1.1rem;
     color: #ffffff;
     line-height: 1.7;
     margin: 0;
     opacity: 0.9;
     font-weight: 400;
-
     margin-top: 1.5rem;
 }
 
@@ -119,7 +107,7 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255);
     color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     transition: all 0.2s;
     border-radius: 4px;
 }
@@ -136,7 +124,6 @@
 
 .ProductContentBodyButton button {
     background-color: var(--cta-primary);
-    /* #3B6255 Dark Green */
     color: #ffffff;
     border: none;
     padding: 1.5rem 2rem;
@@ -145,7 +132,7 @@
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
-    font-family: 'Lato', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     transition: all 0.2s;
     border-radius: 4px;
     white-space: nowrap;
@@ -163,7 +150,7 @@
 }
 
 .ProductContentBodyButton p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     font-size: 0.85rem;
     color: #c91111;
     margin: 0;
@@ -219,7 +206,7 @@
     font-size: 3rem;
     color: #FFF0C9;
     margin: 0;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1;
 }
 
@@ -320,7 +307,7 @@
     color: #fff;
     border: none;
     padding: 1rem 3rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     width: 100%;
@@ -385,8 +372,8 @@
 
 .iconBox i {
     font-size: 2rem;
-    color: var(--accent);
-    /* #D2C49E */
+    color: var(--brand-primary);
+    /* #8AB086 Brand Green */
 }
 
 .benefitItem p {
@@ -442,19 +429,27 @@
         text-align: center;
     }
 
+    .ProductContentPrice .price {
+        align-items: center;
+    }
+
     .benefitsWrapper {
         grid-template-columns: 1fr;
         gap: 4rem;
+        justify-items: center;
     }
 
     .benefitsLeft {
-        position: static;
+
         text-align: center;
         align-items: center;
+
     }
 
     .bookStack img {
         margin: 0 auto;
+        margin-left: 2rem;
+
     }
 
     .benefitItem {
