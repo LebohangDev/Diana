@@ -18,15 +18,11 @@ function AppContent() {
   const [paymentActive, setPaymentActive] = useState(false);
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const status = params.get("status");
-
-    if (status) {
-      setPaymentActive(true);
-      setPaymentStatus(status);
-      navigate(location.pathname, { replace: true });
-    }
-  }, [location.search, navigate]);
+    const params = new URLSearchParams(window.location.search);
+    const payment = params.get("payment");
+    if (payment === "success") setPaymentActive("PaymentSuccess");
+    if (payment === "cancel") setPaymentActive("PaymentCancel");
+  }, []);
 
   // Scroll to section based on URL path
   useEffect(() => {
