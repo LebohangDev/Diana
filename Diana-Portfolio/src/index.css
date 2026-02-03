@@ -103,6 +103,16 @@ p {
 }
 
 
+.app .activeSection {
+  display: block;
+}
+
+.app .notActiveSection {
+  display: none;
+}
+
+
+
 
 
 

@@ -165,6 +165,15 @@
     background-color: #6b8179;
 }
 
+.note {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
 /* --- RIGHT COLUMN (Collage) --- */
 .section2 {
     position: relative;

@@ -7,13 +7,17 @@ const About = () => {
     const [email, setEmail] = useState('');
     const [isEmailValid, setIsEmailValid] = useState(false);
 
-    const productInfo = {
+    const product = [{
+        type: "ebook",
         title: "Food for Real Life",
-        amount: 19,
-        currency: "USD",
-        successUrl: "https://busyavocado.com/?payment=success",
-        cancelUrl: "https://busyavocado.com/?payment=cancel",
-    };
+        description: "Busy Avocado is about enjoying good food without overcomplicating it.",
+        price: 19,
+        currency: "usd",
+        image: "https://lebohangdev.github.io/busyavocado.com/Images/Ebook/Ebook_1.png",
+        email: email,
+        successUrl: "https://lebohangdev.github.io/busyavocado.com/?payment=success",
+        cancelUrl: "https://lebohangdev.github.io/busyavocado.com/?payment=cancel",
+    }];
 
     const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.toLowerCase());
 
@@ -23,25 +27,16 @@ const About = () => {
         setIsEmailValid(validateEmail(val));
     };
 
-    async function handleZinnaPayment() {
+    async function handleCheckout(productPayload) {
         try {
-            const productPayload = {
-                amount: productInfo.amount,
-                currency: productInfo.currency,
-                title: productInfo.title,
-                email: email,
-                successUrl: productInfo.successUrl,
-                cancelUrl: productInfo.cancelUrl,
-            };
-
-            const res = await fetch('https://asim-portfolio-backend.onrender.com/api/create-payment-intent', {
+            const res = await fetch('https://dianabackend.onrender.com/api/create-checkout-session', {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(productPayload),
             });
 
             const data = await res.json();
-            window.location.href = data.redirect_url;
+            window.location.href = data.url;
 
         } catch (e) {
             console.error("Payment session failed:", e);
@@ -82,11 +77,14 @@ const About = () => {
                         />
                         <button
                             disabled={!isEmailValid}
-                            onClick={() => { handleZinnaPayment(); setEmail(''); }}
+                            onClick={() => { handleCheckout(product); setEmail(''); }}
                             className={!isEmailValid ? styles.disabled : ''}
                         >
                             Buy the Ebook
                         </button>
+                        <p className={styles.note}>
+                            The ebook will be sent to your email. Please check your spam folder if you don't receive it.
+                        </p>
                     </div>
                 </motion.div>
             </motion.div>

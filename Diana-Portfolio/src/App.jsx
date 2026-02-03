@@ -6,12 +6,27 @@ import About from './About/About';
 import Product from './Product/Product';
 import Nav from './Nav/Nav';
 import Footer from './Footer/Footer';
+import PaymentSuccess from './paymentPopups/PaymentSuccess';
+import PaymentCancel from './paymentPopups/PaymentCancel';
 
 function AppContent() {
   const [activeNav, setActiveNav] = useState('Home');
   const containerRef = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
+
+  const [paymentActive, setPaymentActive] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const status = params.get("status");
+
+    if (status) {
+      setPaymentActive(true);
+      setPaymentStatus(status);
+      navigate(location.pathname, { replace: true });
+    }
+  }, [location.search, navigate]);
 
   // Scroll to section based on URL path
   useEffect(() => {
@@ -63,6 +78,14 @@ function AppContent() {
 
       <div className="footer">
         <Footer />
+      </div>
+
+      <div className={paymentActive === 'PaymentSuccess' ? 'activeSection' : 'notActiveSection'}>
+        <PaymentSuccess setPaymentActive={setPaymentActive} />
+      </div>
+
+      <div className={paymentActive === 'PaymentCancel' ? 'activeSection' : 'notActiveSection'}>
+        <PaymentCancel setPaymentActive={setPaymentActive} />
       </div>
     </div>
   );
