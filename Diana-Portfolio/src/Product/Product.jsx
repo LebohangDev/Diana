@@ -51,8 +51,8 @@ const Product = () => {
             currency: "usd",
             image: "https://lebohangdev.github.io/busyavocado.com/Images/Ebook/Ebook_1.png",
             email: email,
-            successUrl: "https://lebohangdev.github.io/busyavocado.com?payment=success",
-            cancelUrl: "https://lebohangdev.github.io/busyavocado.com?payment=cancel",
+            successUrl: "https://busyavocado.com/?payment=success",
+            cancelUrl: "https://busyavocado.com/?payment=cancel",
         }
     ];
 

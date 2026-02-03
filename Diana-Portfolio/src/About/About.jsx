@@ -15,8 +15,8 @@ const About = () => {
         currency: "usd",
         image: "https://lebohangdev.github.io/busyavocado.com/Images/Ebook/Ebook_1.png",
         email: email,
-        successUrl: "https://lebohangdev.github.io/busyavocado.com/?payment=success",
-        cancelUrl: "https://lebohangdev.github.io/busyavocado.com/?payment=cancel",
+        successUrl: "https://lebohangdev.github.io/Diana/?payment=success",
+        cancelUrl: "https://lebohangdev.github.io/Diana/?payment=cancel",
     }];
 
     const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.toLowerCase());
