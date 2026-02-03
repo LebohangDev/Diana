@@ -15,8 +15,8 @@ const About = () => {
         currency: "usd",
         image: "https://lebohangdev.github.io/busyavocado.com/Images/Ebook/Ebook_1.png",
         email: email,
-        successUrl: "https://lebohangdev.github.io/Diana/?payment=success",
-        cancelUrl: "https://lebohangdev.github.io/Diana/?payment=cancel",
+        successUrl: "https://busyavocado.com/?payment=success",
+        cancelUrl: "https://busyavocado.com/?payment=cancel",
     }];
 
     const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.toLowerCase());
@@ -91,7 +91,7 @@ const About = () => {
             <div className={styles.section2}>
                 <div className={styles.imgContainer}>
                     <motion.img
-                        src="Images/Diana/Diana_1.JPG"
+                        src="Images/Diana/Diana_1.jpg"
                         alt=""
                         variants={floatingVariant1}
                         initial={{ opacity: 0, scale: 0.95 }}
@@ -101,7 +101,7 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                     />
                     <motion.img
-                        src="Images/Diana/Diana_2.JPG"
+                        src="Images/Diana/Diana_2.jpg"
                         alt=""
                         variants={floatingVariant2}
                         initial={{ opacity: 0, scale: 0.95 }}
