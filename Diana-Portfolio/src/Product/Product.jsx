@@ -49,7 +49,7 @@ const Product = () => {
             description: "Busy Avocado is about enjoying good food without overcomplicating it.",
             price: 19,
             currency: "usd",
-            image: "https://lebohangdev.github.io/busyavocado.com/Images/Ebook/Ebook_1.png",
+            image: "https://busyavocado.com/Images/Ebook/Ebook_1.png",
             email: email,
             successUrl: "https://busyavocado.com/?payment=success",
             cancelUrl: "https://busyavocado.com/?payment=cancel",
