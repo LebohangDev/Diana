@@ -14,27 +14,27 @@ const Product = () => {
 
     const benefitsItems = [
         {
-            description: "Enjoy cooking more by keeping meals simple, familiar, and worth repeating.",
+            description: "Simple, flexible recipes made with real ingredients for everyday cooking.",
             icon: "ri-restaurant-2-line"
         },
         {
-            description: "Build easy routines around food that fit into real schedules and busy days.",
-            icon: "ri-calendar-check-line"
+            description: "A mix of wholesome mains, vegetable-forward dishes, quick bowls and salads, comforting basics, and light desserts for any kind of day.",
+            icon: "ri-restaurant-line"
         },
         {
-            description: "Feel more confident in the kitchen without stressing over 'doing it right.'",
-            icon: "ri-shield-star-line"
+            description: "Approachable methods (baking, air frying, blending, pressure cooking, stovetop) with ingredient swaps to suit your kitchen and lifestyle.",
+            icon: "ri-fire-line"
         },
         {
-            description: "Shift naturally from ordering in to cooking at home more often.",
-            icon: "ri-home-heart-line"
-        },
-        {
-            description: "Take the pressure off food by focusing on what works for you, not strict rules.",
+            description: "Support to enjoy cooking more, with meals that are familiar, balanced, and worth repeating.",
             icon: "ri-heart-3-line"
         },
         {
-            description: "Stay consistent with home cooking even when life is busy, social, or unpredictable.",
+            description: "A natural shift from ordering in to cooking at home more often, building habits that fit into real life.",
+            icon: "ri-home-heart-line"
+        },
+        {
+            description: "A calmer way to cook and eat, focused on what works for you, even when life is busy, social, or unpredictable.",
             icon: "ri-time-line"
         }
     ];
@@ -168,8 +168,8 @@ const Product = () => {
                 <div className={styles.benefitsWrapper}>
                     {/* Left Side: Learn More */}
                     <div className={styles.benefitsLeft}>
-                        <h2>Benefits</h2>
-                        <p>Helps you enjoy cooking more, shift from ordering in to cooking at home, and build habits that fit naturally into your everyday life without pressure, guilt, or extremes.</p>
+                        <h2>What to expect?</h2>
+                        <p>A collection of recipes and ideas designed to make everyday cooking simpler, calmer, and more enjoyable, without pressure, extremes, or complicated rules.</p>
 
                         <a href="#Product">
                             <button className={styles.orderBtn}>Order ebook<i class="ri-shopping-bag-3-line"></i></button>

@@ -295,6 +295,7 @@
     font-size: 4rem;
     color: var(--text-header);
     font-weight: 500;
+    white-space: nowrap;
     margin: 0;
 }
 
