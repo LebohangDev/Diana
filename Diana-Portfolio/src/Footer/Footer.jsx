@@ -44,7 +44,7 @@ const Footer = () => {
 
             </div>
             <hr />
-            <p>© 2026 Diana Zavzeatii. All rights reserved. | www.creatorsblueprint.net</p>
+            <p>© {new Date().getFullYear()} Diana Zavzeatii. All rights reserved. | www.creatorsblueprint.net</p>
 
 
 
