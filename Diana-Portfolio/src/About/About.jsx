@@ -27,6 +27,8 @@ const About = () => {
         setIsEmailValid(validateEmail(val));
     };
 
+    /*
+
     async function handleCheckout(productPayload) {
         try {
             const res = await fetch('https://dianabackend.onrender.com/api/create-checkout-session', {
@@ -41,6 +43,48 @@ const About = () => {
         } catch (e) {
             console.error("Payment session failed:", e);
         }
+    }
+    */
+
+    // pass the selected plan from user
+    async function handleZinnaPayment(productPayload) {
+        try {
+
+            const planPayload = {
+                amount: productPayload.price,
+                email: email,
+                successUrl: productPayload.successUrl,
+                cancelUrl: productPayload.cancelUrl,
+
+            }
+
+            const res = await fetch('https://dianabackend.onrender.com/api/create-payment-intent', {
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(planPayload),
+
+            });
+            console.log(planPayload);
+
+            const data = await res.json()
+            window.location.href = data.redirect_url;
+
+            console.log("redirect url:", data.redirect_url)
+
+
+
+        } catch (e) {
+            console.error("failed to send request to create payment session for user:", e)
+
+
+
+        }
+
+
+
+
+
+
     }
 
     return (
@@ -77,7 +121,7 @@ const About = () => {
                         />
                         <button
                             disabled={!isEmailValid}
-                            onClick={() => { handleCheckout(product); setEmail(''); }}
+                            onClick={() => { handleZinnaPayment(product); setEmail(''); }}
                             className={!isEmailValid ? styles.disabled : ''}
                         >
                             Buy the Ebook
