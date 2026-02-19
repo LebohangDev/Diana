@@ -7,17 +7,19 @@ const About = () => {
     const [email, setEmail] = useState('');
     const [isEmailValid, setIsEmailValid] = useState(false);
 
-    const product = [{
-        type: "ebook",
-        title: "Food for Real Life",
-        description: "Busy Avocado is about enjoying good food without overcomplicating it.",
-        price: 19,
-        currency: "usd",
-        image: "https://lebohangdev.github.io/busyavocado.com/Images/Ebook/Ebook_1.png",
-        email: email,
-        successUrl: "https://busyavocado.com/?payment=success",
-        cancelUrl: "https://busyavocado.com/?payment=cancel",
-    }];
+    const product = [
+        {
+            type: "ebook",
+            title: "Food for Real Life",
+            description: "Busy Avocado is about enjoying good food without overcomplicating it.",
+            price: 19,
+            currency: "usd",
+            image: "https://busyavocado.com/Images/Ebook/Ebook_1.png",
+            email: email,
+            successUrl: "https://busyavocado.com/?payment=success",
+            cancelUrl: "https://busyavocado.com/?payment=cancel",
+        }
+    ];
 
     const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.toLowerCase());
 
@@ -57,6 +59,7 @@ const About = () => {
                 cancelUrl: productPayload.cancelUrl,
 
             }
+            console.log("plan payload:", planPayload);
 
             const res = await fetch('https://dianabackend.onrender.com/api/create-payment-intent', {
                 method: 'POST',
