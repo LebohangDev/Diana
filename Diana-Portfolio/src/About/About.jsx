@@ -59,7 +59,6 @@ const About = () => {
                 cancelUrl: productPayload.cancelUrl,
 
             }
-            console.log("plan payload:", planPayload);
 
             const res = await fetch('https://dianabackend.onrender.com/api/create-payment-intent', {
                 method: 'POST',
@@ -70,7 +69,7 @@ const About = () => {
             console.log(planPayload);
 
             const data = await res.json()
-            window.location.href = data.redirect_url;
+            //window.location.href = data.redirect_url;
 
             console.log("redirect url:", data.redirect_url)
 
@@ -124,7 +123,7 @@ const About = () => {
                         />
                         <button
                             disabled={!isEmailValid}
-                            onClick={() => { handleZinnaPayment(product); setEmail(''); }}
+                            onClick={() => { handleZinnaPayment(product[0]); setEmail(''); }}
                             className={!isEmailValid ? styles.disabled : ''}
                         >
                             Buy the Ebook
