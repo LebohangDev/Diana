@@ -91,6 +91,7 @@ const Product = () => {
             const planPayload = {
                 amount: productPayload.price,
                 email: email,
+                currency: productPayload.currency,
                 successUrl: productPayload.successUrl,
                 cancelUrl: productPayload.cancelUrl,
 
