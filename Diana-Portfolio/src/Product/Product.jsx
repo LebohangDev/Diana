@@ -48,7 +48,7 @@ const Product = () => {
             title: "Food for Real Life",
             description: "Busy Avocado is about enjoying good food without overcomplicating it.",
             price: 19,
-            currency: "usd",
+            currency: "USD",
             image: "https://busyavocado.com/Images/Ebook/Ebook_1.png",
             email: email,
             successUrl: "https://busyavocado.com/?payment=success",
