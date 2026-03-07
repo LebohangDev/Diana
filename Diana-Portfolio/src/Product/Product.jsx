@@ -97,7 +97,7 @@ const Product = () => {
 
             }
 
-            const res = await fetch('https://dianabackend.onrender.com/api/create-payment-intent', {
+            const res = await fetch('https://diana-648711352735.me-west1.run.app/api/create-payment-intent', {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(planPayload),
